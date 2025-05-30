@@ -1,0 +1,284 @@
+/* ——————————————————————————————————————————————————————————
+   VARIABLES DE IDENTIDAD VISUAL
+—————————————————————————————————————————————————————————— */
+:root {
+  --color-principal: #007bff;
+  --color-secundario: #00c6ff;
+  --color-fondo: #f8f9fa;
+  --color-texto: #333;
+  --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Tema Oscuro */
+[data-theme="dark"] {
+  --color-fondo: #121212;
+  --color-texto: #e0e0e0;
+  --color-principal: #66b2ff;
+  --color-secundario: #3388ff;
+}
+
+/* ——————————————————————————————————————————————————————————
+   RESET & GLOBALES
+—————————————————————————————————————————————————————————— */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: var(--font-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  text-align: center;
+  padding-top: 4rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ——————————————————————————————————————————————————————————
+   NAVBAR FIJA
+—————————————————————————————————————————————————————————— */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: var(--color-fondo);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+.nav-container {
+  display: flex; justify-content: center; align-items: center;
+  gap: 1.5rem; padding: 1rem 2rem;
+}
+.nav-container a {
+  position: relative; text-decoration: none;
+  color: var(--color-texto); font-weight: 500;
+  padding: 0.5rem;
+}
+.nav-container a::after {
+  content: ''; position: absolute; left: 0; bottom: 0;
+  width: 100%; height: 2px; background: var(--color-principal);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-container a:hover::after {
+  transform: scaleX(1);
+}
+/* Botón toggle */
+#theme-toggle {
+  background: none; border: none; font-size: 1.2rem;
+  cursor: pointer; margin-left: 1rem;
+  color: var(--color-texto);
+}
+
+/* ——————————————————————————————————————————————————————————
+   HERO (Parallax)
+—————————————————————————————————————————————————————————— */
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url('/images/hero-bg.jpg') center / cover fixed;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero-title {
+  font-size: 3rem; color: #fff; margin-bottom: 0.5rem;
+}
+.hero-subtitle {
+  font-size: 1.5rem; color: #fff; opacity: 0.9;
+}
+
+/* ——————————————————————————————————————————————————————————
+   SECCIÓN CERTIFICACIONES
+—————————————————————————————————————————————————————————— */
+.certificaciones-section {
+  padding: 4rem 2rem;
+}
+.certificaciones-section h2 {
+  font-size: 2.5rem; color: var(--color-principal);
+}
+.certificaciones-section .linea {
+  height: 4px; width: 100px;
+  background-color: var(--color-principal);
+  margin: 1rem auto 2rem; border-radius: 5px;
+}
+.badges-container {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 2rem;
+}
+.badges-container img {
+  width: 100px; height: auto; transition: transform 0.3s ease;
+}
+.badges-container a:hover img {
+  transform: scale(1.1);
+}
+
+/* ——————————————————————————————————————————————————————————
+   SECCIÓN PROYECTOS
+—————————————————————————————————————————————————————————— */
+.proyectos-section {
+  padding: 4rem 2rem;
+}
+.proyectos-section h2 {
+  font-size: 2.5rem; color: var(--color-principal);
+}
+.proyectos-section .linea {
+  height: 4px; width: 100px;
+  background-color: var(--color-principal);
+  margin: 1rem auto 2rem; border-radius: 5px;
+}
+/* GRID RESPONSIVE */
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem; margin-top: 2rem; padding: 0 1rem;
+}
+/* CARD PROYECTO */
+.proyecto {
+  background-color: var(--color-fondo);
+  border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; transform: translateY(20px);
+}
+.proyecto.visible {
+  opacity: 1; transform: translateY(0);
+}
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.proyecto img {
+  width: 100%; height: 160px; object-fit: cover;
+}
+.info-proyecto {
+  padding: 1rem;
+}
+.titulo-proyecto {
+  font-weight: 600; font-size: 1.1rem; color: var(--color-texto);
+}
+.btn-proyecto {
+  display: inline-block; margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem; background-color: var(--color-principal);
+  color: #fff; border-radius: 5px; text-decoration: none;
+  font-size: 0.9rem; transition: background-color 0.2s ease;
+}
+.btn-proyecto:hover {
+  background-color: #0056b3;
+}
+.fade-in {
+  will-change: opacity, transform;
+}
+
+/* ——————————————————————————————————————————————————————————
+   FOOTER
+—————————————————————————————————————————————————————————— */
+.footer {
+  padding: 3rem 1rem; font-size: 0.9rem; color: #666;
+}
+.footer .redes {
+  margin: 0.5rem 0; display: flex;
+  justify-content: center; gap: 1rem;
+}
+.footer a {
+  text-decoration: none; color: var(--color-principal);
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ——————————————————————————————————————————————————————————
+   CERTIFICADOS (Badges + Certificados reales)
+—————————————————————————————————————————————————————————— */
+.certificaciones-section .badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.certificado-card {
+  /* ancho máximo para legibilidad */
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* Badge encima del certificado */
+.certificado-card .badge-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Imagen real del certificado */
+.certificado-card .cert-img {
+  width: 100%;
+  max-height: 140px;        /* límite de altura para que no sea gigante */
+  object-fit: contain;      /* que se ajuste sin recortar */
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificado-card .cert-img:hover {
+  transform: scale(1.03);
+}
+
+/* Texto descriptivo debajo */
+.certificado-card .certificado-texto {
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  font-weight: 500;
+}
+
+
+/* ——————————————————————————————————————————————————————————
+   NAVBAR: ajuste responsive para móviles
+—————————————————————————————————————————————————————————— */
+@media (max-width: 750px) {
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.8rem 1rem;    /* un poco más de espacio pero sin exagerar */
+    gap: 0.75rem;
+  }
+  .nav-container a,
+  .nav-container button {
+    flex: 0 1 auto;         /* ancho según contenido */
+    margin: 0.3rem;
+    text-align: center;
+    padding: 0.4rem 0.6rem;  /* padding más cómodo en móviles */
+    font-size: 0.9rem;       /* texto un poco más pequeño */
+  }
+  .icon-link img {
+    width: 24px;             /* tamaño fijo legible */
+    height: 24px;
+  }
+  .navbar {
+    position: relative;
+  }
+}
+
+
+/* Estilo general de los icon-links en la navbar */
+.icon-link {
+  display: inline-block;
+  padding: 0.3rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.icon-link:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+.icon-link img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
