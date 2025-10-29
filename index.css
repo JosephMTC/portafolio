@@ -73,7 +73,7 @@ body {
 .hero {
   position: relative;
   height: 60vh;
-  background: url('/images/hero-bg.jpg') center / cover fixed;
+  background: url('images/hero-bg.jpg') center / cover fixed;
   display: flex; align-items: center; justify-content: center;
 }
 .hero-overlay {
