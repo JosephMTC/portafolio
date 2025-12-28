@@ -3,173 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portafolio | Joseph Cedeño</title>
+  <title>Joseph Cedeño | Frontend Developer</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- NAVBAR FIJA -->
+  
+  <div class="background-grid"></div>
+
   <header class="navbar">
-  <nav class="nav-container">
-    <a href="#hero">Inicio</a>
-    <a href="#certificaciones">Certificaciones</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-    <!-- Enlaces a redes -->
-    <a href="https://github.com/josephmtc" target="_blank" class="icon-link">
-      <img src="/images/github.svg" alt="GitHub" loading="lazy">
-    </a>
-    <a href="https://www.linkedin.com/in/joseph-cede%C3%B1o-976550366/" target="_blank" class="icon-link">
-      <img src="/images/linkedin.svg" alt="LinkedIn" loading="lazy">
-    </a>
-    <!-- Toggle modo -->
-    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
-  </nav>
-</header>
+    <nav class="nav-container">
+      <a href="#hero" class="logo">JC.</a>
+      <div class="nav-links">
+        <a href="#proyectos">Trabajos</a>
+        <a href="#certificaciones">Formación</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://github.com/josephmtc" target="_blank" class="icon-link">
+          <img src="/images/github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/joseph-cede%C3%B1o-976550366/" target="_blank" class="icon-link">
+          <img src="/images/linkedin.svg" alt="LinkedIn">
+        </a>
+        <button id="theme-toggle" aria-label="Cambiar tema">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-
-  <!-- SECCIÓN HERO con Parallax -->
   <section id="hero" class="hero">
-    <div class="hero-overlay">
-      <h1 class="hero-title">Joseph Cedeño</h1>
-      <p class="hero-subtitle">Front End Developer Junior</p>
+    <div class="hero-content" data-tilt>
+      <div class="hero-badge">Disponible para trabajar</div>
+      <h1 class="hero-title">Creando experiencias <br> <span class="text-gradient">web inmersivas</span></h1>
+      <p class="hero-subtitle">Joseph Cedeño — Frontend Developer</p>
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+        <a href="#contacto" class="btn-secondary">Contáctame</a>
+      </div>
     </div>
   </section>
 
-  <!-- CERTIFICACIONES -->
+  <section class="tech-marquee">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>React</span><span>•</span>
+        <span>Vue.js</span><span>•</span>
+        <span>TypeScript</span><span>•</span>
+        <span>Tailwind CSS</span><span>•</span>
+        <span>Git</span><span>•</span>
+        <span>Firebase</span><span>•</span>
+        <span>Node.js</span><span>•</span>
+        <span>UI/UX</span><span>•</span>
+      </div>
+      <div class="marquee-content">
+        <span>React</span><span>•</span>
+        <span>Vue.js</span><span>•</span>
+        <span>TypeScript</span><span>•</span>
+        <span>Tailwind CSS</span><span>•</span>
+        <span>Git</span><span>•</span>
+        <span>Firebase</span><span>•</span>
+        <span>Node.js</span><span>•</span>
+        <span>UI/UX</span><span>•</span>
+      </div>
+    </div>
+  </section>
 
-
-
-  <!-- PROYECTOS -->
   <main>
-    <section id="proyectos" class="proyectos-section">
-      <h2>Mis Proyectos</h2>
-      <div class="linea"></div>
-      <div class="galeria-proyectos">
-        <!-- Proyecto 1 -->
-        <div class="proyecto fade-in">
-          <img src="/images/bookApp.png" alt="App de Libros" loading="lazy" />
-          <div class="info-proyecto">
-            <p class="titulo-proyecto">App de Libros (React + Tailwind)</p>
-            <a class="btn-proyecto" href="https://josephmtc.github.io/book-app/" target="_blank">
-              Ver repositorio
-            </a>
+    <section id="proyectos" class="section-padding">
+      <div class="section-header">
+        <h2>Proyectos Destacados</h2>
+        <p>Código limpio y rendimiento optimizado.</p>
+      </div>
+      
+      <div class="projects-grid">
+        
+        <article class="project-card" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="project-image-wrapper">
+              <img src="/images/ecommerceEclipse.png" alt="Eclipse Ecommerce Preview" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span>Vue.js</span>
+                <span>Firebase</span>
+              </div>
+              <h3>Eclipse Ecommerce</h3>
+              <p>Plataforma de comercio SPA con gestión de estado, carrito de compras y autenticación.</p>
+              <a href="https://josephmtc.github.io/Eclipse/" target="_blank" class="link-arrow">
+                Ver Proyecto <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="project-image-wrapper">
+              <img src="/images/bookApp.png" alt="Book App Preview" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span>React</span>
+                <span>Tailwind</span>
+              </div>
+              <h3>Book App Explorer</h3>
+              <p>Aplicación interactiva para búsqueda de libros con filtrado dinámico en tiempo real.</p>
+              <a href="https://josephmtc.github.io/book-app/" target="_blank" class="link-arrow">
+                Ver Proyecto <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="project-image-wrapper">
+              <img src="/images/sweetDelights.png" alt="Sweet Delights Preview" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span>HTML5</span>
+                <span>CSS Avanzado</span>
+              </div>
+              <h3>Sweet Delights</h3>
+              <p>Landing page moderna con diseño inmersivo, animaciones y estructura semántica.</p>
+              <a href="https://josephmtc.github.io/proyecto-sweetDelights/" target="_blank" class="link-arrow">
+                Ver Proyecto <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="project-image-wrapper">
+              <img src="/images/dashboardClima.png" alt="Clima Dashboard Preview" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span>JavaScript</span>
+                <span>Rest API</span>
+              </div>
+              <h3>Weather Dashboard</h3>
+              <p>Consumo de OpenWeatherMap API para visualización de datos climáticos en tiempo real.</p>
+              <a href="https://josephmtc.github.io/Proyecto-Clima/" target="_blank" class="link-arrow">
+                Ver Proyecto <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+         <article class="project-card" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="project-image-wrapper">
+              <img src="/images/shodwe.jpg" alt="Shodwe Preview" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+              </div>
+              <h3>Shodwe Landing</h3>
+              <p>Landing page minimalista enfocada en la conversión y la jerarquía visual.</p>
+              <a href="https://josephmtc.github.io/Shodwe" target="_blank" class="link-arrow">
+                Ver Proyecto <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="card-glow"></div>
+          <div class="card-content">
+            <div class="project-image-wrapper">
+              <img src="/images/netsentinel.png" alt="NetSentinel Dashboard Preview" loading="lazy">
+            </div>
+            <div class="project-info">
+              <div class="tech-tags">
+                <span>React</span>
+                <span>Tailwind</span>
+                <span>Node.js</span>
+              </div>
+              <h3>NetSentinel Dashboard</h3>
+              <p>Panel de control centralizado para gestión de bots y monitoreo de red. Interfaz administrativa con métricas en tiempo real.</p>
+              <a href="https://netsentinel-dashboard.vercel.app/" target="_blank" class="link-arrow">
+                Ver Proyecto <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </section>
+
+    <section id="certificaciones" class="section-padding bg-subtle">
+      <div class="section-header">
+        <h2>Certificaciones</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-item" data-tilt>
+          <img src="/images/netzun.jpeg" alt="Certificado Netzun" loading="lazy">
+          <div class="cert-overlay">
+            <span>Netzun Certified</span>
           </div>
         </div>
-        <!-- Proyecto 2 -->
-        <div class="proyecto fade-in">
-          <img src="/images/sweetDelights.png" alt="Landing Pastelería" loading="lazy" />
-          <div class="info-proyecto">
-            <p class="titulo-proyecto">Pastelería (Landing page avanzada)</p>
-            <a class="btn-proyecto" href="https://josephmtc.github.io/proyecto-sweetDelights/" target="_blank">
-              Ver repositorio
-            </a>
-          </div>
-        </div>
-        <!-- Proyecto 3 -->
-        <div class="proyecto fade-in">
-          <img src="/images/dashboardClima.png" alt="Dashboard Clima" loading="lazy" />
-          <div class="info-proyecto">
-            <p class="titulo-proyecto">Dashboard del Clima</p>
-            <a class="btn-proyecto" href="https://josephmtc.github.io/Proyecto-Clima/" target="_blank">
-              Ver repositorio
-            </a>
-          </div>
-        </div>
-        <!-- Proyecto 4 -->
-        <div class="proyecto fade-in">
-          <img src="/images/shodwe.jpg" alt="App Shodwe" loading="lazy" />
-          <div class="info-proyecto">
-            <p class="titulo-proyecto">Shodwe (Landing page basica)</p>
-            <a class="btn-proyecto" href="https://josephmtc.github.io/Shodwe" target="_blank">
-              Ver repositorio
-            </a>
+        <div class="cert-item" data-tilt>
+          <img src="/images/udemy.jpeg" alt="Certificado Udemy" loading="lazy">
+          <div class="cert-overlay">
+            <span>Udemy Certified</span>
           </div>
         </div>
       </div>
     </section>
 
-
-    <section id="certificaciones" class="certificaciones-section">
-  <h2>Certificaciones</h2>
-  <div class="linea"></div>
-  <div class="badges-container">
-    <!-- Card Netzun -->
-    <div class="certificado-card">
-      <!-- Badge Netzun -->
-      <img
-        class="badge-img"
-        src="https://img.shields.io/badge/Certificación-Netzun-0e76a8?style=for-the-badge"
-        alt="Badge Certificación Netzun"
-        loading="lazy"
-      />
-      <!-- Imagen real del certificado -->
-      <img
-        class="cert-img"
-        src="/images/netzun.jpeg"
-        alt="Certificado Netzun"
-        loading="lazy"
-      />
-      <p class="certificado-texto">Certificado Netzun</p>
-    </div>
-
-    <!-- Card Udemy -->
-    <div class="certificado-card">
-      <!-- Badge Udemy -->
-      <img
-        class="badge-img"
-        src="https://img.shields.io/badge/Certificación-Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white"
-        alt="Badge Certificación Udemy"
-        loading="lazy"
-      />
-      <!-- Imagen real del certificado -->
-      <img
-        class="cert-img"
-        src="/images/udemy.jpeg"
-        alt="Certificado Udemy"
-        loading="lazy"
-      />
-      <p class="certificado-texto">Certificado Udemy</p>
-    </div>
-  </div>
-</section>
-
-    <!-- CONTACTO / FOOTER -->
-    <footer id="contacto" class="footer">
-      <p>Sígueme en:</p>
-      <div class="redes">
-        <a href="https://github.com/josephmtc" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/joseph-cede%C3%B1o-976550366/" target="_blank">LinkedIn</a>
+    <footer id="contacto" class="footer-cta">
+      <div class="footer-content">
+        <h2>¿Listo para construir algo increíble?</h2>
+        <p>Actualmente estoy buscando oportunidades como Junior Frontend Developer.</p>
+        <a href="mailto:tuemail@ejemplo.com" class="btn-primary large">Hablemos</a>
+        
+        <div class="footer-socials">
+          <a href="https://github.com/josephmtc" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/joseph-cede%C3%B1o-976550366/" target="_blank">LinkedIn</a>
+        </div>
+        <p class="copyright">© 2025 Joseph Cedeño.</p>
       </div>
-      <p>© 2025 Joseph Cedeño</p>
     </footer>
+
   </main>
 
-  <!-- SCRIPTS -->
   <script>
-    // Fade-in con Intersection Observer
-    document.addEventListener('DOMContentLoaded', () => {
-      const items = document.querySelectorAll('.fade-in');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      items.forEach(item => observer.observe(item));
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.setAttribute('data-theme', savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
     });
 
-    // Toggle Modo Claro/Oscuro
-    const toggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') ||
-                        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    // 3D TILT EFFECT LOGIC (Vanilla JS Professional)
+    const cards = document.querySelectorAll('[data-tilt]');
+    
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Multiplicador ajustado para suavidad
+        const rotateX = ((y - centerY) / centerY) * -5; 
+        const rotateY = ((x - centerX) / centerX) * 5;  
 
-    toggle.addEventListener('click', () => {
-      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        
+        // Efecto de brillo (Glow)
+        const glow = card.querySelector('.card-glow');
+        if(glow) {
+          glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.2), transparent 40%)`;
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+        const glow = card.querySelector('.card-glow');
+        if(glow) {
+          glow.style.background = 'transparent';
+        }
+      });
     });
   </script>
 </body>
